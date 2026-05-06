@@ -14,9 +14,13 @@ cask "posse" do
 
   depends_on arch: :arm64
 
-  quarantine false
-
   app "POSSE.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/POSSE.app"],
+                   sudo: false
+  end
 
   zap trash: [
     "~/Library/Application Support/net.puddingtime.posse",
