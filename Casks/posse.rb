@@ -1,6 +1,6 @@
 cask "posse" do
-  version "0.1.0"
-  sha256 "409190c200eac3facd3e8d9c469ce35de2de5fcbca6b2ff2877c2b36625a7227"
+  version "0.1.1"
+  sha256 "7280697a801f5052600b93e142d1676d04eb5aa3aaf9408328df377cea84b8fd"
 
   url "https://github.com/mph-llm-experiments/posse/releases/download/v#{version}/POSSE_#{version}_aarch64.dmg"
   name "POSSE"
