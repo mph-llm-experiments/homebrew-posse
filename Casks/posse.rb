@@ -2,15 +2,10 @@ cask "posse" do
   version "0.1.1"
   sha256 "7280697a801f5052600b93e142d1676d04eb5aa3aaf9408328df377cea84b8fd"
 
-  url "https://github.com/mph-llm-experiments/posse/releases/download/v#{version}/POSSE_#{version}_aarch64.dmg"
+  url "https://dist.puddingtime.net/posse/v#{version}/POSSE_#{version}_aarch64.dmg"
   name "POSSE"
   desc "Personal POSSE publisher (Bluesky, Mastodon, Hugo)"
   homepage "https://github.com/mph-llm-experiments/posse"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   depends_on arch: :arm64
 
