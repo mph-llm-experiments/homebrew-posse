@@ -1,6 +1,6 @@
 cask "posse" do
-  version "0.1.10"
-  sha256 "6eb71595540986b55dfd3ddf389fbd626997388ccc12a7c3614a0219a45295d1"
+  version "0.1.11"
+  sha256 "2c2d16beb0969dfa18fd13376bc1c723af8a4e6a686441982305d4e3e0efc3cc"
 
   url "https://dist.puddingtime.net/posse/v#{version}/POSSE_#{version}_aarch64.dmg"
   name "POSSE"
