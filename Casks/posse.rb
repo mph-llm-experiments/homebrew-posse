@@ -8,18 +8,17 @@ cask "posse" do
   homepage "https://github.com/mph-llm-experiments/posse"
 
   depends_on arch: :arm64
+  depends_on :macos
 
   app "POSSE.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/POSSE.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/POSSE.app"]
   end
 
   zap trash: [
     "~/Library/Application Support/net.puddingtime.posse",
     "~/Library/Caches/net.puddingtime.posse",
-    "~/Library/WebKit/net.puddingtime.posse"
+    "~/Library/WebKit/net.puddingtime.posse",
   ]
 end
